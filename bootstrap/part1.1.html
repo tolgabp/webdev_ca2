@@ -3,35 +3,36 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
+        <meta name="description" content="SQLite Exercise" />
         <meta name="author" content="" />
         <title>Webdev CA2</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
     </head>
     <body>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#"> WebDev CA2</a>
+                <a class="navbar-brand" href="#">WebDev Ca2</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#part1.1.html">Part 1.1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="part1.2.html">Part 1.2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="part1.3.html">Part 1.3</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="part1.1.html">Part 1.1</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="part1.2.html">Part 1.2</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="part1.3.html">Part 1.3</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Page content-->
         <div class="container">
-            <div class="row">   
-                <div class="col-lg-12 text-center mt-5">
+            <div class="row">
+                <div class="text-center mt-5">
                     <h1>CA2: Data Manipulation & Validation</h1>
-                    <p class="lead">This is Part 1.1</p>
+                    <p class="lead">This is Part1.1</p>
                 </div>
                 <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
                     <button name="1.1.1" class="btn btn-success btn-block">1.1.1</button>
@@ -42,12 +43,19 @@
                 </div>
                 <div class="col-lg-10 order-2 border-success">
                     <textarea id="commands" class="mb-5">TEXT</textarea>
+                    <div class="d-grid gap-2 mt-2 mb-1">
+                        <button class="btn btn-primary" type="button" id="execute">execute</button>
+                        <input type="file" class="form-control" id="dbfile">
+                    </div>
+                    <div id="error" class="error"></div>
+                    <pre id="output" class="output">Results will be displayed here</pre>
                 </div>
-            </div>     
+            </div>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/gui.js"></script> 
     </body>
 </html>
