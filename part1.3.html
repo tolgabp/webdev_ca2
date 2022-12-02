@@ -3,17 +3,24 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="SQLite Exercise" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description"
+        content="SQLite Exercise" />
     <meta name="author" content="" />
     <title>Webdev CA2</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
-        integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+    <link href="css/styles.css"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
+        integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG"
+        crossorigin="anonymous">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
     <script>
         function reply_click(clicked_object) {
             let sql = clicked_object.getAttribute('data-sql');
@@ -24,18 +31,45 @@
 
 <body>
     <!-- Responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">WebDev Ca2</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="part1.1.html">Part 1.1</a>
+            <a class="navbar-brand"
+                href="#">WebDev Ca2</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navbarSupportedContent">
+                <ul
+                    class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li
+                        class="nav-item">
+                        <a class="nav-link"
+                            aria-current="page"
+                            href="part1.1.html">Part
+                            1.1</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="part1.2.html">Part 1.2</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="part1.3.html">Part 1.3</a></li>
+                    <li
+                        class="nav-item">
+                        <a class="nav-link"
+                            aria-current="page"
+                            href="part1.2.html">Part
+                            1.2</a>
+                    </li>
+                    <li
+                        class="nav-item">
+                        <a class="nav-link active"
+                            aria-current="page"
+                            href="part1.3.html">Part
+                            1.3</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -43,48 +77,68 @@
     <!-- Page content-->
     <div class="container">
         <div class="row">
-            <div class="text-center mt-5">
-                <h1>CA2: Data Manipulation & Validation</h1>
-                <p class="lead">This is Part1.1</p>
+            <div
+                class="text-center mt-5">
+                <h1>CA2: Data
+                    Manipulation &
+                    Validation</h1>
+                <p class="lead">This is
+                    Part1.1
+                </p>
             </div>
-            <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                <button name="1.3.1" class="btn btn-success btn-block" data-sql="SELECT dept_id, sum( gender = 'F' ) as num_empFemale,
-                    sum( gender = 'M' ) AS num_empMale FROM dept_manager dm 
-                    INNER JOIN employees e ON dm.emp_id = e.emp_id 
-                    GROUP BY dept_id ORDER BY dept_id ASC LIMIT 100;" onClick="reply_click(this)">1.3.1</button>
-                <button name="1.3.2" class="btn btn-success btn-block" data-sql="SELECT gender, AVG(salary) AS avg_salary, title FROM titles tile 
-                INNER JOIN employees e, salaries sal ON tile.emp_id = e.emp_id
-                AND tile.emp_id = sal.emp_id AND e.emp_id = sal.emp_id 
-                WHERE title = 'Technique Leader' GROUP BY gender LIMIT 100;" onClick="reply_click(this)">1.3.2</button>
-                <button name="1.3.3" class="btn btn-success btn-block"
-                    data-sql="SELECT COUNT(emp_id) FROM salaries WHERE to_date = '9999-01-01' And salary BETWEEN 90000 And 90040 ;"
+            <div
+                class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
+                <button name="1.3.1"
+                    class="btn btn-success btn-block"
+                    data-sql="SELECT dept_id, sum( gender = &#39;F&#39; ) as num_empFemale,&#10;sum( gender = &#39;M&#39; ) AS num_empMale FROM dept_manager dm&#10;INNER JOIN employees e ON dm.emp_id = e.emp_id&#10;GROUP BY dept_id ORDER BY dept_id ASC LIMIT 100;"
+                    onClick="reply_click(this)">1.3.1</button>
+                <button name="1.3.2"
+                    class="btn btn-success btn-block"
+                    data-sql="SELECT gender, AVG(salary) AS avg_salary, title FROM titles tile&#10;INNER JOIN employees e, salaries sal ON tile.emp_id = e.emp_id&#10;AND tile.emp_id = sal.emp_id AND e.emp_id = sal.emp_id&#10;WHERE title = &#39;Technique Leader&#39; GROUP BY gender LIMIT 100;"
+                    onClick="reply_click(this)">1.3.2</button>
+                <button name="1.3.3"
+                    class="btn btn-success btn-block"
+                    data-sql="SELECT COUNT(emp_id) FROM salaries WHERE to_date = &#39;9999-01-01&#39; And salary BETWEEN 90000 And 90040;"
                     onClick="reply_click(this)">1.3.3</button>
-                <button name="1.3.4" class="btn btn-success btn-block" data-sql="SELECT DISTINCT last_name, first_name, salary
-                    FROM employees e Inner JOIN salaries sal ON e.emp_id = sal.emp_id
-                    WHERE to_date = '9999-01-01' AND salary > 90000 
-                    GROUP BY last_name, first_name order BY LOWER(last_name) DESC, 
-                    LOWER(first_name) DESC LIMIT 100;" onClick="reply_click(this)">1.3.4</button>
-                <button name="1.3.5" class="btn btn-success btn-block" data-sql="SELECT e.first_name, e.last_name, s.salary 
-                    FROM employees e INNER JOIN salaries s 
-                    ON e.emp_id = s.emp_id WHERE e.emp_id = '10012' LIMIT 100;"
+                <button name="1.3.4"
+                    class="btn btn-success btn-block"
+                    data-sql="SELECT DISTINCT last_name, first_name, salary&#10;FROM employees e Inner JOIN salaries sal ON e.emp_id = sal.emp_id&#10;WHERE to_date = &#39;9999-01-01&#39; AND salary > 90000&#10;GROUP BY last_name, first_name order BY LOWER(last_name) DESC,&#10;LOWER(first_name) DESC LIMIT 100;"
+                    onClick="reply_click(this)">1.3.4</button>
+                <button name="1.3.5"
+                    class="btn btn-success btn-block"
+                    data-sql="SELECT e.first_name, e.last_name, s.salary&#10;FROM employees e INNER JOIN salaries s&#10;ON e.emp_id = s.emp_id WHERE e.emp_id = &#39;10012&#39; LIMIT 100;"
                     onClick="reply_click(this)">1.3.5</button>
             </div>
-            <div class="col-lg-10 order-2 border-success">
-                <textarea id="commands" class="mb-5">TEXT</textarea>
-                <div class="d-grid gap-2 mt-2 mb-1">
-                    <button class="btn btn-primary" type="button" id="execute">execute</button>
-                    <input type="file" class="form-control" id="dbfile">
+            <div
+                class="col-lg-10 order-2 border-success">
+                <textarea id="commands"
+                    class="mb-5">TEXT</textarea>
+                <div
+                    class="d-grid gap-2 mt-2 mb-1">
+                    <button
+                        class="btn btn-primary"
+                        type="button"
+                        id="execute">execute</button>
+                    <input type="file"
+                        class="form-control"
+                        id="dbfile">
                 </div>
-                <div id="error" class="error"></div>
-                <pre id="output" class="output">Results will be displayed here</pre>
+                <div id="error"
+                    class="error">
+                </div>
+                <pre id="output"
+                    class="output">Results will be displayed here</pre>
             </div>
         </div>
     </div>
     <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/gui.js"></script>
+    <script
+        src="js/scripts.js"></script>
+    <script type="text/javascript"
+        src="js/gui.js"></script>
 </body>
 
 </html>
