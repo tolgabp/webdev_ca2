@@ -48,23 +48,24 @@
                 <p class="lead">This is Part1.2</p>
             </div>
             <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                <button name="1.2.1" class="btn btn-success btn-block" data-sql="SELECT COUNT(from_date) FROM dept_emp 
-                     WHERE from_date = '1991-05-01' LIMIT 100;" onClick="reply_click(this)">1.2.1</button>
-                <button name="1.2.2" class="btn btn-success btn-block" data-sql="SELECT COUNT(from_date) FROM dept_emp 
-                    WHERE from_date = '1991-05-01' LIMIT 100;" onClick="reply_click(this)">1.2.2</button>
+                <button name="1.2.1" class="btn btn-success btn-block"
+                    data-sql="SELECT COUNT(from_date) FROM dept_emp&#10WHERE from_date = '1991-05-01' LIMIT 100;"
+                    onClick="reply_click(this)">1.2.1</button>
+                <button name="1.2.2" class="btn btn-success btn-block"
+                    data-sql="SELECT DISTINCT emp_id, COUNT(emp_id) FROM titles&#10GROUP BY emp_id HAVING COUNT (*) &gt; 2 LIMIT 100;"
+                    onClick="reply_click(this)">1.2.2</button>
                 <button name="1.2.3" class="btn btn-success 
-                    btn-block" data-sql="SELECT * FROM employees WHERE gender = 'F' LIMIT 100;"
+                    btn-block" data-sql="SELECT * FROM employees&#10WHERE gender = 'F' LIMIT 100;"
                     onClick="reply_click(this)">1.2.3</button>
-                <button name="1.2.4" class="btn btn-success btn-block" data-sql="SELECT * FROM employees WHERE hire_date < '1986-01-01' 
-                    AND last_name = 'Simmel' LIMIT 100;" onClick="reply_click(this)">1.2.4</button>
+                <button name="1.2.4" class="btn btn-success btn-block"
+                    data-sql="SELECT * FROM employees&#10WHERE hire_date &lt; '1986-01-01'&#10AND last_name = 'Simmel' LIMIT 100;"
+                    onClick="reply_click(this)">1.2.4</button>
                 <button name="1.2.5" class="btn btn-success btn-block"
-                    data-sql="SELECT COUNT(last_name) as totalWithB FROM employees WHERE last_name LIKE 'B%' LIMIT 100;"
+                    data-sql="SELECT COUNT(last_name) as totalWithB FROM employees&#10WHERE last_name LIKE 'B%' LIMIT 100;"
                     onClick="reply_click(this)">1.2.5</button>
-                <button name="1.2.6" class="btn btn-success btn-block" data-sql="CREATE TABLE emp_training( 
-                        trainer_no INTEGER PRIMARY KEY AUTOINCREMENT not NULL, 
-                        first_name VARCHAR(30) NOT NULL,
-                        last_name VARCHAR(30) NOT NULL, 
-                        t_module VARCHAR(20));" onClick="reply_click(this)">1.2.6</button>
+                <button name="1.2.6" class="btn btn-success btn-block"
+                    data-sql="CREATE TABLE emp_training(trainer_no INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,&#10first_name VARCHAR(30) NOT NULL,&#10last_name VARCHAR(30) NOT NULL,&#10t_module VARCHAR(20));"
+                    onClick="reply_click(this)">1.2.6</button>
                 <button name="1.2.7" class="btn btn-success btn-block" data-sql="INSERT INTO emp_training (first_name, last_name, t_module) VALUES ('Joe', 'Bloggs', 'Google Docs');
                 INSERT INTO emp_training (first_name, last_name, t_module) VALUES ('Fred', 'Bloggs', 'Google Sheets');"
                     onClick="reply_click(this)">1.2.7</button>
