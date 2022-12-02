@@ -48,26 +48,26 @@
                 <p class="lead">This is Part1.1</p>
             </div>
             <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                <button name="1.1.1" class="btn btn-success btn-block" data-sql="SELECT dept_id, sum( gender = 'F' ) as num_empFemale,
+                <button name="1.3.1" class="btn btn-success btn-block" data-sql="SELECT dept_id, sum( gender = 'F' ) as num_empFemale,
                     sum( gender = 'M' ) AS num_empMale FROM dept_manager dm 
                     INNER JOIN employees e ON dm.emp_id = e.emp_id 
-                    GROUP BY dept_id ORDER BY dept_id ASC LIMIT 100;" onClick="reply_click(this)">1.1.1</button>
-                <button name="1.1.2" class="btn btn-success btn-block" data-sql="SELECT gender, AVG(salary) AS avg_salary, title FROM titles tile 
+                    GROUP BY dept_id ORDER BY dept_id ASC LIMIT 100;" onClick="reply_click(this)">1.3.1</button>
+                <button name="1.3.2" class="btn btn-success btn-block" data-sql="SELECT gender, AVG(salary) AS avg_salary, title FROM titles tile 
                 INNER JOIN employees e, salaries sal ON tile.emp_id = e.emp_id
                 AND tile.emp_id = sal.emp_id AND e.emp_id = sal.emp_id 
-                WHERE title = 'Technique Leader' GROUP BY gender LIMIT 100;" onClick="reply_click(this)">1.1.2</button>
-                <button name="1.1.3" class="btn btn-success btn-block"
+                WHERE title = 'Technique Leader' GROUP BY gender LIMIT 100;" onClick="reply_click(this)">1.3.2</button>
+                <button name="1.3.3" class="btn btn-success btn-block"
                     data-sql="SELECT COUNT(emp_id) FROM salaries WHERE to_date = '9999-01-01' And salary BETWEEN 90000 And 90040 ;"
-                    onClick="reply_click(this)">1.1.3</button>
-                <button name="1.1.4" class="btn btn-success btn-block" data-sql="SELECT DISTINCT last_name, first_name, salary
+                    onClick="reply_click(this)">1.3.3</button>
+                <button name="1.3.4" class="btn btn-success btn-block" data-sql="SELECT DISTINCT last_name, first_name, salary
                     FROM employees e Inner JOIN salaries sal ON e.emp_id = sal.emp_id
                     WHERE to_date = '9999-01-01' AND salary > 90000 
                     GROUP BY last_name, first_name order BY LOWER(last_name) DESC, 
-                    LOWER(first_name) DESC LIMIT 100;" onClick="reply_click(this)">1.1.4</button>
-                <button name="1.1.5" class="btn btn-success btn-block" data-sql="SELECT e.first_name, e.last_name, s.salary 
+                    LOWER(first_name) DESC LIMIT 100;" onClick="reply_click(this)">1.3.4</button>
+                <button name="1.3.5" class="btn btn-success btn-block" data-sql="SELECT e.first_name, e.last_name, s.salary 
                     FROM employees e INNER JOIN salaries s 
                     ON e.emp_id = s.emp_id WHERE e.emp_id = '10012' LIMIT 100;"
-                    onClick="reply_click(this)">1.1.5</button>
+                    onClick="reply_click(this)">1.3.5</button>
             </div>
             <div class="col-lg-10 order-2 border-success">
                 <textarea id="commands" class="mb-5">TEXT</textarea>
